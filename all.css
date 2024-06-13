@@ -12139,7 +12139,7 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 }
 @media (max-width: 767px) {
   .bloc-md{
-    padding:100px 10px;
+    padding:10px 10px;
   }
   .no-display{
     display:none !important;
