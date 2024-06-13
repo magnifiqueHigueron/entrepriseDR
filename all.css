@@ -7886,7 +7886,11 @@ textarea.form-control-lg {
 .align-self-center {
   align-self: center !important;
 }
-
+@media (max-width: 576px) {
+  .hide-on-mobile {
+      display: none !important;
+  }
+}
 .align-self-baseline {
   align-self: baseline !important;
 }
