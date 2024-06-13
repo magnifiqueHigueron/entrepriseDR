@@ -12993,6 +12993,10 @@ h5{
       width: 100%;
       text-align: center !important; /* Centre le texte */
   }
+  .text-in-mobile {
+      text-align: center !important; /* Centre le texte */
+      font-size: 50% !important; 
+  }
 }
 
 .h4-bloc-1-style{
