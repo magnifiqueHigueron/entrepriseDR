@@ -12999,6 +12999,9 @@ h5{
       padding-left: 20%;
       padding-right: 20%;
   }
+  .title-on-mobile{
+    text-align:center !important;
+  }
 }
 
 .h4-bloc-1-style{
