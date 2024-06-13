@@ -27,6 +27,7 @@
 			text-align: center;
 			padding: 10px;
 			z-index: 1000;
+			display: none; /* Masqué par défaut, sera affiché par JavaScript si nécessaire */
 		}
 		
 		.cookie-banner p {
@@ -47,7 +48,20 @@
 		.cookie-banner .btn:hover {
 			background-color: #0056b3;
 		}
-
+		
+		.cookie-icon {
+			position: fixed;
+			bottom: 20px;
+			right: 20px;
+			z-index: 1001;
+			cursor: pointer;
+		}
+		
+		.cookie-icon img {
+			width: 40px;
+			height: 40px;
+		}
+		
 </style>
 </head>
 <body>
@@ -56,6 +70,10 @@
     <p>Nous utilisons des cookies pour améliorer votre expérience. En continuant à utiliser notre site, vous acceptez notre <a href="politiqueconfidentialite/index.html">politique de confidentialité</a>.</p>
     <button id="accept-cookies" class="btn">Accepter</button>
     <button id="decline-cookies" class="btn">Refuser</button>
+</div>
+
+<div id="cookie-icon" class="cookie-icon">
+    <a href="#" id="cookie-policy-link"><img src="img/cookies-web.png" alt="Cookie Policy" width="40" height="40"></a>
 </div>
 <div class="page-container">
     
@@ -325,6 +343,9 @@
 		</div>
 </div>
 <!-- footer END -->
+<div id="cookie-icon" class="cookie-icon">
+    <a href="politiqueconfidentialite/index.html" id="cookie-policy-link"><img src="path/to/icon.png" alt="Cookie Policy" width="40" height="40"></a>
+</div>
 
 </div>
 <!-- Main container END -->
@@ -338,12 +359,12 @@
 <script src="./js/universal-parallax.min.js?8230"></script>
 <script src="./js/scrollFX.js?7414"></script>
 
-
 <script>
     document.addEventListener("DOMContentLoaded", function() {
         var cookieBanner = document.getElementById('cookie-banner');
         var acceptCookiesButton = document.getElementById('accept-cookies');
         var declineCookiesButton = document.getElementById('decline-cookies');
+        var cookiePolicyLink = document.getElementById('cookie-policy-link');
 
         // Vérifie si l'utilisateur a déjà donné son consentement
         if (!getCookie('cookies_accepted')) {
@@ -359,6 +380,11 @@
         declineCookiesButton.addEventListener('click', function() {
             setCookie('cookies_accepted', 'false', 365);
             cookieBanner.style.display = 'none';
+        });
+
+        cookiePolicyLink.addEventListener('click', function(event) {
+            event.preventDefault();
+            cookieBanner.style.display = 'block';
         });
 
         function setCookie(name, value, days) {
@@ -383,6 +409,7 @@
         }
     });
 </script>
+
 
 <!-- Additional JS END -->
 
