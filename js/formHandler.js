@@ -1,5 +1,6 @@
 $(function()
 {	
+	console.log("formHandler.js loaded");
 	$('[data-form-type="blocs-form"] input,[data-form-type="blocs-form"] textarea').jqBootstrapValidation(
     {
      	preventSubmit: true,
@@ -40,8 +41,8 @@ $(function()
 		    		cache: false,
 		    		success: function(data) // Success
 		 			{  
-						console.log(data);
-						console.log($form.attr('data-success-msg'));
+						console.log("email enviado");
+						
 		 				if ($form.find('#form-feedback-alert').length == 0) // Add Alert
 		 				{
 		 					$form.append("<div id='form-feedback-alert' class='mt-2'><div class='alert alert-success' role='alert'><button type='button' class='btn-close float-end' data-bs-dismiss='alert' aria-hidden='true'></button><strong></strong></div></div>");
@@ -77,6 +78,7 @@ $(function()
 		 	   		},
 			   		error: function(xhr, status, error) // Error Posting Form
 			   		{
+						console.log("email NO enviado");
 						if ($('#form-alert').length == 0)
 						{
 							$form.append("<div id='form-alert' class='mt-2'><div class='alert alert-danger' role='alert'><button type='button' class='btn-close float-end' data-bs-dismiss='alert' aria-hidden='true'></button><strong>"+$form.attr('data-fail-msg')+"</strong></div></div>");
