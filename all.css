@@ -12995,7 +12995,7 @@ h5{
   }
   .text-in-mobile {
       text-align: center !important; /* Centre le texte */
-      font-size: 40% !important; 
+      font-size: 20px !important; 
       padding-left: 20%;
       padding-right: 20%;
   }
