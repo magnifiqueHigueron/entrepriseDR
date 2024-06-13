@@ -12995,6 +12995,9 @@ h5{
   line-height: 63px;
   width: 88.91%;
 }
+.no-format {
+  white-space: nowrap;
+}
 
 @media (max-width: 576px) {
   .h3-3-style {
