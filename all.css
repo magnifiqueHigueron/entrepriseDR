@@ -4001,7 +4001,7 @@ textarea.form-control-lg {
 }
 @media (max-width: 576px) {
   .navbar-brand {
-    font-size: 11px;
+    font-size: 20px !important;
   }
 }
 .navbar-brand:hover, .navbar-brand:focus {
