@@ -13082,7 +13082,8 @@ url("img/ax-tree-trunk-background-roadway.webp") 2x);
 @media (max-width: 576px) {
   .bg-ax-tree-trunk-background-roadway {
       background-image: none;
-      background-color: #2C5B1C;
+      background-color: black;
+      color:white;
   }
 }
 .bg-gardener-safety-glasses-gloves-pruning-hedge{
