@@ -40,6 +40,8 @@ $(function()
 		    		cache: false,
 		    		success: function(data) // Success
 		 			{  
+						console.log(data);
+						console.log($form.attr('data-success-msg'));
 		 				if ($form.find('#form-feedback-alert').length == 0) // Add Alert
 		 				{
 		 					$form.append("<div id='form-feedback-alert' class='mt-2'><div class='alert alert-success' role='alert'><button type='button' class='btn-close float-end' data-bs-dismiss='alert' aria-hidden='true'></button><strong></strong></div></div>");
