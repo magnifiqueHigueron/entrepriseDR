@@ -13002,6 +13002,9 @@ h5{
   .title-on-mobile{
     text-align:center !important;
   }
+  .contact-mobile{
+    width: 50% !important;
+  }
 }
 
 .h4-bloc-1-style{
