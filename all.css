@@ -12137,6 +12137,12 @@ nav .dropdown-menu .nav-link{color:rgba(0,0,0,0.6)!important;} /* Maintain Downd
 .bloc-md{
 	padding:20px 5px;
 }
+@media (max-width: 767px) {
+  .bloc-md{
+    padding:100px 10px;
+  }
+  
+}
 
 /* = Full Screen Blocs 
 -------------------------------------------------------------- */
