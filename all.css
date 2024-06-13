@@ -13054,6 +13054,12 @@ url("img/ax-tree-trunk-background-roadway.webp") 2x);background-image: image-set
 url("img/ax-tree-trunk-background-roadway.jpg") 2x,url("img/ax-tree-trunk-background-roadway.webp") 1x,
 url("img/ax-tree-trunk-background-roadway.webp") 2x);
 }
+@media (max-width: 576px) {
+  .bg-ax-tree-trunk-background-roadway {
+      background-image: none;
+      background-color: black;
+  }
+}
 .bg-gardener-safety-glasses-gloves-pruning-hedge{
 	background-image:url("img/gardener-safety-glasses-gloves-pruning-hedge.jpg");
 	background-image: -webkit-image-set(url("img/gardener-safety-glasses-gloves-pruning-hedge.webp") 1x,
