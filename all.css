@@ -12969,6 +12969,13 @@ h5{
 	line-height:63px;
 	width:88.91%;
 }
+@media (max-width: 576px) {
+  .h3-3-style {
+      font-size: 25px;
+      line-height: 33px;
+      width: 100%;
+  }
+}
 .h4-bloc-1-style{
 	width:87.85%;
 	font-size:32px;
