@@ -35,7 +35,11 @@
 			padding: 0;
 			display: inline;
 		}
-		
+		@media (max-width: 768px) {
+			.cookie-banner p {
+				font-size: 10px;
+			}
+		}
 		.cookie-banner .btn {
 			background-color: #007bff;
 			color: white;
@@ -72,9 +76,9 @@
     <button id="decline-cookies" class="btn">Refuser</button>
 </div>
 
-<div id="cookie-icon" class="cookie-icon">
+{% comment %} <div id="cookie-icon" class="cookie-icon">
     <a href="politiquecookies/index.html" id="cookie-policy-link"><img src="img/galleta.png" width="40" height="40"></a>
-</div>
+</div> {% endcomment %}
 <div class="page-container">
     
 <!-- bloc-1 -->

@@ -12980,18 +12980,21 @@ h5{
 .h4-style{
 	font-size:15px;
 }
-.h3-3-style{
-	font-size:53px;
-	line-height:63px;
-	width:88.91%;
+.h3-3-style {
+  font-size: 53px;
+  line-height: 63px;
+  width: 88.91%;
 }
+
 @media (max-width: 576px) {
   .h3-3-style {
       font-size: 38px;
       line-height: 38px;
       width: 100%;
+      text-align: center; /* Centre le texte */
   }
 }
+
 .h4-bloc-1-style{
 	width:91%;
 	font-size:24px;
