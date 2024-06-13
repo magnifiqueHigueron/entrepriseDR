@@ -12681,6 +12681,12 @@ label{
 	background-color:transparent;
 	border-width:1px 1px 1px 1px;
 }
+@media (max-width: 767px){
+  .designer-wire-button{
+    padding-right:60px;
+    padding-left:70px;
+  }
+}
 .designer-wire-button:hover{
 	background-color:#FEFB00;
 	border-style:solid;
