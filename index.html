@@ -17,10 +17,46 @@
 <!-- Analytics -->
  
 <!-- Analytics END -->
-    
+    <style>
+		.cookie-banner {
+			position: fixed;
+			bottom: 0;
+			width: 100%;
+			background-color: #000;
+			color: #fff;
+			text-align: center;
+			padding: 10px;
+			z-index: 1000;
+		}
+		
+		.cookie-banner p {
+			margin: 0;
+			padding: 0;
+			display: inline;
+		}
+		
+		.cookie-banner .btn {
+			background-color: #007bff;
+			color: white;
+			border: none;
+			padding: 5px 10px;
+			margin-left: 10px;
+			cursor: pointer;
+		}
+		
+		.cookie-banner .btn:hover {
+			background-color: #0056b3;
+		}
+
+</style>
 </head>
 <body>
 <!-- Main container -->
+<div id="cookie-banner" class="cookie-banner">
+    <p>Nous utilisons des cookies pour améliorer votre expérience. En continuant à utiliser notre site, vous acceptez notre <a href="politiqueconfidentialite/index.html">politique de confidentialité</a>.</p>
+    <button id="accept-cookies" class="btn">Accepter</button>
+    <button id="decline-cookies" class="btn">Refuser</button>
+</div>
 <div class="page-container">
     
 <!-- bloc-1 -->
@@ -301,6 +337,53 @@
 <script src="./js/lazysizes.min.js" defer></script>
 <script src="./js/universal-parallax.min.js?8230"></script>
 <script src="./js/scrollFX.js?7414"></script>
+
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        var cookieBanner = document.getElementById('cookie-banner');
+        var acceptCookiesButton = document.getElementById('accept-cookies');
+        var declineCookiesButton = document.getElementById('decline-cookies');
+
+        // Vérifie si l'utilisateur a déjà donné son consentement
+        if (!getCookie('cookies_accepted')) {
+            cookieBanner.style.display = 'block';
+        }
+
+        acceptCookiesButton.addEventListener('click', function() {
+            setCookie('cookies_accepted', 'true', 365);
+            cookieBanner.style.display = 'none';
+            // Place ton code de suivi ici
+        });
+
+        declineCookiesButton.addEventListener('click', function() {
+            setCookie('cookies_accepted', 'false', 365);
+            cookieBanner.style.display = 'none';
+        });
+
+        function setCookie(name, value, days) {
+            var expires = "";
+            if (days) {
+                var date = new Date();
+                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+                expires = "; expires=" + date.toUTCString();
+            }
+            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        }
+
+        function getCookie(name) {
+            var nameEQ = name + "=";
+            var ca = document.cookie.split(';');
+            for (var i = 0; i < ca.length; i++) {
+                var c = ca[i];
+                while (c.charAt(0) === ' ') c = c.substring(1, c.length);
+                if (c.indexOf(nameEQ) === 0) return c.substring(nameEQ.length, c.length);
+            }
+            return null;
+        }
+    });
+</script>
+
 <!-- Additional JS END -->
 
 
