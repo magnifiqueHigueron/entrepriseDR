@@ -9,6 +9,9 @@
     <link rel="shortcut icon" type="image/jpg" href="../favicon.jpg">
     
 	<link rel="stylesheet" type="text/css" href="../all.css?8374">
+	<link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
+
+
 	
     <title>Entreprise DR</title>
 
@@ -17,7 +20,45 @@
 <!-- Analytics -->
  
 <!-- Analytics END -->
-    
+    <style>
+
+.noselect {
+	-webkit-touch-callout: none;
+	  -webkit-user-select: none;
+	   -khtml-user-select: none;
+		 -moz-user-select: none;
+		  -ms-user-select: none;
+			  user-select: none;
+		  -webkit-tap-highlight-color: transparent;
+  }
+  
+  button {
+	  width: 150px;
+	  height: 50px;
+	  cursor: pointer;
+	  border: none;
+	  font-family: 'Comfortaa', cursive;
+	  color: rgba(255,255,255,0.5);
+	  font-size: 20px;
+	  border-radius: 4px;
+	  box-shadow: inset 0px 3px 5px rgba(255,255,255,0.5), 0px 0px 10px rgba(0,0,0,0.15);
+	  background: rgb(2,0,36);
+  background: linear-gradient(45deg, rgba(2,0,36,0) 5%, rgba(255,255,255,.5) 6%, rgba(255,255,255,0) 9%, rgba(255,255,255,.5) 10%, rgba(255,255,255,0) 17%, rgba(255,255,255,.5) 19%, rgba(255,255,255,0) 21%);
+	  background-size: 150%;
+	  background-position: right;
+	  transition: 1s;
+  }
+  
+  button:hover {
+	  background-position: left;
+	  color: white;
+	  box-shadow: inset 0px 3px 5px rgba(255,255,255,1), 0px 0px 10px rgba(0,0,0,0.25);
+  }
+  
+  button:focus {
+	  outline: none;
+  }
+  </style>
 </head>
 <body data-clean-url="true">
 <!-- Main container -->
@@ -127,7 +168,7 @@
 					<div class="form-group mb-3">
 						<textarea id="message" class="form-control" rows="4" cols="50" required="" placeholder="Votre message" maxlength="1000"></textarea>
 					</div> 
-					<button class="bloc-button" type="submit" background-color="green">
+					<button class="noselect" type="submit" background-color="green">
 						Contact
 					</button>
 				</form>
