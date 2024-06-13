@@ -13133,8 +13133,8 @@ url("img/10.webp") 2x);
     .bloc-xxl-sm{padding:200px 20px;}
     .bloc-xl-sm{padding:150px 20px;}
     .bloc-lg-sm{padding:100px 20px;}
-    .bloc-md-sm{padding:50px 20px;}
-    .bloc-sm-sm{padding:20px;}
+    .bloc-md-sm{padding:5px 2px;}
+    .bloc-sm-sm{padding:2px;}
     .bloc-no-padding-sm{padding:0 20px;}
 }
 @media (min-width: 768px) {
